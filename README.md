@@ -276,3 +276,119 @@ pip install pandas numpy scipy yfinance matplotlib openpyxl pyarrow
 ```
 
 ---
+
+## Future Improvements & Roadmap
+
+This project is designed as a continuously evolving system. The following enhancements are planned to improve scalability, robustness, and real-world usability.
+
+## 1. Data Infrastructure & Storage
+
+Replace flat files (.csv, .xlsx, .parquet) with a structured database:
+SQLite (local lightweight setup),
+PostgreSQL (production-ready),
+
+Build a proper data schema for:
+Transactions (ledger),
+Market prices,
+FX rates,
+Portfolio snapshots,
+Enable incremental updates instead of full reprocessing,
+Add versioning for historical data consistency.
+
+## 2. Automated Data Pipelines
+
+Automate data ingestion from broker statements:
+Scheduled jobs (daily/weekly refresh),
+Auto-detection of new transactions.
+
+Replace manual Yahoo Finance pulls with:
+Cached API layer,
+Retry + validation mechanisms
+Introduce logging and monitoring for pipeline reliability
+
+## 3. Multi-Broker & Multi-Asset Support
+
+Extend support beyond Fineco to:
+Zerodha / Groww / Interactive Brokers
+Add new asset classes:
+Mutual funds / ETFs (full support)
+Bonds and fixed income instruments
+Crypto assets (via exchange APIs)
+Standardize a universal transaction schema across brokers
+
+## 4. Portfolio Features & Analytics
+
+Add advanced analytics:
+Factor exposure (Fama-French factors)
+Sector allocation & drift tracking
+Performance attribution (allocation vs selection effect)
+Risk enhancements:
+Value at Risk (VaR) / Conditional VaR
+Stress testing (market crash scenarios)
+Benchmark flexibility:
+Custom benchmarks (NIFTY, sector indices, blended benchmarks)
+
+## 5. Performance Optimization
+
+Optimize heavy computations using:
+Vectorization improvements in pandas/numpy
+Optional use of Polars for faster data processing
+Introduce caching layers for:
+Computed metrics
+Intermediate datasets
+Parallelize data fetching and processing where applicable
+6. User Interface & Visualization
+Build an interactive dashboard using:
+Streamlit or Dash
+Features:
+Portfolio overview (P&L, allocation, drawdown)
+Interactive charts (zoom, filter by ticker/time)
+Real-time metric updates
+Export reports in user-friendly formats (PDF / HTML dashboards)
+
+## 7. Backtesting & Strategy Layer
+   
+Extend the system into a backtesting engine:
+Strategy simulation on historical data
+Comparison of multiple strategies vs actual portfolio
+Add support for:
+Rebalancing strategies
+Dollar-cost averaging simulations
+Factor-based portfolios
+
+## 8. Testing & Code Quality
+
+Add comprehensive unit and integration tests:
+Portfolio engine validation
+Cash flow and return calculations
+Introduce CI/CD pipeline:
+Automated testing on every commit
+Improve documentation:
+Function-level docstrings
+Type validation and stricter schemas (e.g., pydantic)
+
+## 9.. API Layer & Integration
+
+Expose core functionality via a REST API:
+Portfolio metrics endpoint
+Time-series data endpoint
+Enable integration with:
+Frontend dashboards
+External applications
+
+## 10. Real-World Production Readiness
+
+Add configuration management (env-based configs)
+Implement robust error handling and alerts
+Secure handling of sensitive data (API keys, financial data)
+Prepare for deployment:
+Docker containerization
+Cloud deployment (AWS/GCP)
+Long-Term Vision
+
+## The long-term goal is to evolve this project from a personal analytics tool into a modular portfolio analytics platform, capable of:
+
+Handling institutional-grade data pipelines
+Supporting multiple users and portfolios
+Providing real-time analytics and insights
+Bridging the gap between finance theory and production systems
