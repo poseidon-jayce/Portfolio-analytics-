@@ -1,0 +1,26 @@
+# Dati personali - non caricare mai
+data/
+
+# Cache rigenerabile
+cache/
+
+# Output rigenerabili
+outputs/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+dist/
+build/
+
+# VSCode
+.vscode/
+
+# macOS
+.DS_Store
+
+# Pytest
+.pytest_cache/
