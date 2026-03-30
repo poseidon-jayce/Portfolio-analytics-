@@ -28,22 +28,22 @@ Prior to this, I had built an equity analytics project that included Monte Carlo
 This project goes significantly deeper by moving from market-level analysis to real portfolio-level analytics.
 
 Key advancements in this project:
-End-to-end portfolio engine (cash flows, positions, returns)
-Benchmark comparison against S&P 500 Total Return
-Accurate handling of external cash flows (TWR vs MWR/XIRR)
-Rolling metrics to analyze performance across time
-Per-ticker contribution & attribution analysis
-Real-world data integration (broker statements, FX conversion, missing data handling)
+End-to-end portfolio engine (cash flows, positions, returns),
+Benchmark comparison against S&P 500 Total Return,
+Accurate handling of external cash flows (TWR vs MWR/XIRR),
+Rolling metrics to analyze performance across time,
+Per-ticker contribution & attribution analysis,
+Real-world data integration (broker statements, FX conversion, missing data handling).
 
 ## Learning Outcomes
 
 This project helped me develop a much deeper understanding of:
 
-Portfolio return methodologies (TWR vs MWR)
-Risk and performance measurement in real-world scenarios
-Data pipeline design for financial systems
-Handling imperfect financial data (missing prices, timing assumptions, FX)
-Translating financial theory into production-like code
+Portfolio return methodologies (TWR vs MWR),
+Risk and performance measurement in real-world scenarios,
+Data pipeline design for financial systems,
+Handling imperfect financial data (missing prices, timing assumptions, FX),
+Translating financial theory into production-like code.
 
 Overall, this project represents a shift from theoretical analytics to practical, real-world portfolio analysis, combining finance, data science, and software engineering.
 
